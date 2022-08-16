@@ -1,0 +1,7 @@
+<templateSet group="user">
+  <template name="&lt;pt" value="(defn print-through [x]&#10;    (println x)&#10;    x)" description="print-through!" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="Clojure" value="true" />
+    </context>
+  </template>
+</templateSet>

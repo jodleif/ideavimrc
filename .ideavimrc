@@ -1,45 +1,37 @@
-set ignorecase
-set smartcase
-set scrolloff=3         " 3 lines above/below cursor when scrolling
-set ideajoin
+set relativenumber
+set number
+set showmode
+set hlsearch
+set ignorecase smartcase
+set visualbell
+set noerrorbells
+
 set surround
 set easymotion
-set relativenumber
+set commentary
 
-" Integrate with system clipboard
-set clipboard=unnamedplus,unnamed
+set clipboard+=unnamed
+set clipboard+=ideaput
 
 let mapleader = " "
 
-imap ,. <Esc>
-vmap ,. <Esc>
+set idearefactormode=keep
 
- " Use Q for formatting the current paragraph (or visual selection)
-vmap Q gq
-nmap Q gqap
+nmap <leader>l :action :cursive.repl.actions/load-file<CR>
+nmap <leader>R :action :cursive.repl.actions/run-top-sexp<CR>
+nmap <leader>gr :action :cursive.repl.actions/jump-to-repl<CR>
+nmap <leader>k :action :cursive.actions.paredit/raise<CR>
+nmap < :action :cursive.actions.paredit/slurp-backwards<CR>
+nmap > :action :cursive.actions.paredit/slurp-forwards<CR>
+nmap <leader>n :action :cursive.repl.actions/switch-namespace<CR>
+nmap <leader>x :action :cursive.actions.paredit/copy-as-kill<CR>
+nmap <leader>r  <Action>(RenameElement)
+nmap <leader>b <Action>(ToggleLineBreakpoint)
+nmap <leader>z <Action>(ToggleDistractionFreeMode)
+nmap <leader> <Action>(GotoNextError)
+nmap <S-Space> <Action>(GotoPreviousError)
 
- " These create newlines like o and O but stay in normal mode
-" nmap zj o<Esc>k
-" nmap zk O<Esc>j
-
- " key bindings for quickly moving between windows
- " h left, l right, k up, j down
-nmap <leader>h <c-w>h
-nmap <leader>l <c-w>l
-nmap <leader>k <c-w>k
-nmap <leader>j <c-w>j
-
-nmap <leader>g :action GotoDeclaration<cr>
-nmap <leader>b :action Back<cr>
-nmap <leader>f :action Forward<cr>
-
-nmap <leader>t :action GotoFile<cr>
-nmap <leader>c :action GotoClass<cr>
-nmap <leader>ns :action GotoSymbol<cr>
-nmap <leader>nm :action FileStructurePopup<cr>
-nmap <leader>d :action ShowErrorDescription<cr>
-nmap == :action ReformatCode<cr>
-
- " Switches between .cc and .h file!
-nmap <leader>s :action GotoRelated<cr>
+ 
+map <leader>f <Plug>(easymotion-s)
+map <leader>e <Plug>(easymotion-f)
 

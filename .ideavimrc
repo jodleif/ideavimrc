@@ -30,6 +30,7 @@ nmap <leader>b <Action>(ToggleLineBreakpoint)
 nmap <leader>z <Action>(ToggleDistractionFreeMode)
 nmap <leader> <Action>(GotoNextError)
 nmap <S-Space> <Action>(GotoPreviousError)
+nmap <leader>t <Action>(GotoRelated)
 
  
 map <leader>f <Plug>(easymotion-s)

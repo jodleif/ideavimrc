@@ -1,5 +1,10 @@
 <code_scheme name="Default" version="173">
   <ClojureCodeStyleSettings>
     <option name="alignMapValues" value="false" />
+    <option name="indentCustomisations">
+      <map>
+        <entry key="next.jdbc/with-transaction" value="-1" />
+      </map>
+    </option>
   </ClojureCodeStyleSettings>
 </code_scheme>

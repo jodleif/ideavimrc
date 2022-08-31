@@ -6,9 +6,10 @@ set ignorecase smartcase
 set visualbell
 set noerrorbells
 
-set surround
-set easymotion
-set commentary
+Plug 'tpope/vim-surround'
+Plug 'kana/vim-textobj-entire'
+Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-commentary'
 
 set clipboard+=unnamed
 set clipboard+=ideaput
@@ -17,22 +18,29 @@ let mapleader = " "
 
 set idearefactormode=keep
 
-nmap <leader>l :action :cursive.repl.actions/load-file<CR>
-nmap <leader>R :action :cursive.repl.actions/run-top-sexp<CR>
-nmap <leader>gr :action :cursive.repl.actions/jump-to-repl<CR>
-nmap <leader>k :action :cursive.actions.paredit/raise<CR>
-nmap < :action :cursive.actions.paredit/slurp-backwards<CR>
-nmap > :action :cursive.actions.paredit/slurp-forwards<CR>
-nmap <leader>n :action :cursive.repl.actions/switch-namespace<CR>
-nmap <leader>x :action :cursive.actions.paredit/copy-as-kill<CR>
-nmap <leader>r  <Action>(RenameElement)
-nmap <leader>b <Action>(ToggleLineBreakpoint)
-nmap <leader>z <Action>(ToggleDistractionFreeMode)
-nmap <leader> <Action>(GotoNextError)
-nmap <S-Space> <Action>(GotoPreviousError)
-nmap <leader>t <Action>(GotoRelated)
+nnoremap <leader>l :action :cursive.repl.actions/load-file<CR>
+nnoremap <leader>R :action :cursive.repl.actions/run-top-sexp<CR>
+nnoremap <leader>gr :action :cursive.repl.actions/jump-to-repl<CR>
+nnoremap <leader>k :action :cursive.actions.paredit/raise<CR>
+nnoremap < :action :cursive.actions.paredit/slurp-backwards<CR>
+nnoremap > :action :cursive.actions.paredit/slurp-forwards<CR>
+nnoremap <leader>n :action :cursive.repl.actions/switch-namespace<CR>
+nnoremap <leader>y :action :cursive.actions.paredit/copy-as-kill<CR>
+nnoremap <leader>x :action :cursive.actions.paredit/kill-sexp<CR>
+nnoremap <leader>i :action Inline<CR>
+nnoremap <leader>v :action IntroduceVariable<CR>
+
+nnoremap <Leader>q :action CloseContent<CR>
+nnoremap <leader>/ :action FindInPath<CR>
+
+nnoremap <leader>r  <Action>(RenameElement)<CR>
+nnoremap <leader>b <Action>(ToggleLineBreakpoint)<CR>
+nnoremap <leader>z <Action>(ToggleDistractionFreeMode)<CR>
+nnoremap <leader> <Action>(GotoNextError)<CR>
+nnoremap <S-Space> <Action>(GotoPreviousError)<CR>
+nnoremap <leader>t <Action>(GotoRelated)<CR>
 
  
-map <leader>f <Plug>(easymotion-s)
-map <leader>e <Plug>(easymotion-f)
+;;map <leader>f <Plug>(easymotion-s)
+;;map <leader>e <Plug>(easymotion-f)
 

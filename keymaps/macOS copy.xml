@@ -1,5 +1,20 @@
 <keymap version="1" name="macOS copy" parent="Mac OS X 10.5+">
+  <action id="BraceOrQuoteOut" />
+  <action id="EditorChooseLookupItemReplace" />
+  <action id="EditorIndentSelection" />
+  <action id="EditorTab" />
+  <action id="EmacsStyleIndent">
+    <keyboard-shortcut first-keystroke="tab" />
+  </action>
+  <action id="ExpandLiveTemplateByTab" />
+  <action id="NextParameter" />
+  <action id="NextTemplateVariable">
+    <keyboard-shortcut first-keystroke="enter" />
+  </action>
   <action id="QuickList.CLOJURE">
     <keyboard-shortcut first-keystroke="ctrl alt z" />
   </action>
+  <action id="SearchEverywhere.CompleteCommand" />
+  <action id="SearchEverywhere.NextTab" />
+  <action id="SplitChooser.NextWindow" />
 </keymap>

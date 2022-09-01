@@ -3,6 +3,7 @@
     <option name="alignMapValues" value="false" />
     <option name="indentCustomisations">
       <map>
+        <entry key="ardoq.persistence.postgres.postgres/with-transaction" value="-1" />
         <entry key="ardoq.test.api/deftest" value="-1" />
         <entry key="ardoq.test.helper/with-system" value="-1" />
         <entry key="next.jdbc/with-transaction" value="-1" />

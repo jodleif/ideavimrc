@@ -7,10 +7,10 @@
     <keyboard-shortcut first-keystroke="tab" />
   </action>
   <action id="ExpandLiveTemplateByTab" />
-  <action id="NextParameter" />
-  <action id="NextTemplateVariable">
-    <keyboard-shortcut first-keystroke="enter" />
+  <action id="ExpandLiveTemplateCustom">
+    <keyboard-shortcut first-keystroke="tab" />
   </action>
+  <action id="NextParameter" />
   <action id="QuickList.CLOJURE">
     <keyboard-shortcut first-keystroke="ctrl alt z" />
   </action>

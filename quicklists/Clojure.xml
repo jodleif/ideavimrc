@@ -1,4 +1,0 @@
-<list display="Clojure">
-  <action id=":cursive.testing.actions/run-ns-tests" />
-  <action id=":cursive.testing.actions/run-single-test" />
-</list>
